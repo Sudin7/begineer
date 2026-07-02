@@ -1,0 +1,57 @@
+:root{
+    --primary:#8a5a1d;
+    --primary-bright:#d7a63a;
+    --primary-deep:#3f2a13;
+    --white:#ffffff;
+    --cloud:#f7f3ea;
+    --black:#171717;
+    --text:#26211c;
+    --border:rgba(255,255,255,0.15);
+    --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:url('../nepal.jpg') center/cover no-repeat fixed;color:#f8f2e8}
+.nav{position:sticky;top:0;background:rgba(8,10,14,.72);color:#fff;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(10px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.nav ul{display:flex;align-items:center;gap:28px;list-style:none}
+.nav ul li{display:flex;align-items:center}
+.nav a{color:#fff;text-decoration:none}
+.btn,.cta{background:var(--primary-bright);color:#111;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;transition:.3s;display:inline-block}
+.btn:hover,.cta:hover{transform:translateY(-3px);background:#f1f1f1}
+.hero{min-height:90vh;background:linear-gradient(135deg,rgba(0,0,0,.18),rgba(0,0,0,.08)),url('../nepal.jfif') center/cover no-repeat;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:8%;gap:40px}
+.hero h1{font-size:64px}
+.hero p{max-width:620px;color:#f7ebd4;margin-bottom:30px}
+.hero-card{background:rgba(255,255,255,.95);color:#111;padding:40px;border-radius:28px;min-width:320px;box-shadow:0 30px 65px rgba(0,0,0,.18)}
+.hero h1{font-size:60px;margin:15px 0}
+.hero p{max-width:550px;color:#e9dcc7;margin-bottom:30px}
+.tag{color:#f2c94c;text-transform:uppercase}
+.hero-card{background:#fff;color:#111;padding:40px;border-radius:18px;min-width:280px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:70px 8%}
+.card{background:rgba(255,255,255,.94);padding:30px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12);transition:.3s;color:#000}
+.card:hover{transform:translateY(-8px)}
+.card h2,.card h3,.card p{color:#000}
+.services{background:rgb(255, 255, 255);padding-bottom:60px}
+.services h2{text-align:center;padding-top:40px;padding-bottom:20px;color:#000}
+.about{padding:80px 8%;text-align:center;background:rgba(255,255,255,.78);margin:0 auto}
+.about h2{font-size:38px;margin-bottom:18px;color:#000}
+.about p{font-size:20px;line-height:1.8;color:#000;max-width:1100px;margin:0 auto}
+.contact h2,.contact p,.cta-section h2,.cta-section p{color:#000}
+footer{background:rgba(8,12,16,.95);color:#fff;text-align:center;padding:30px}
+.language-switcher{display:flex;align-items:center}
+.language-switcher select{border:none;border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.14);color:#fff;outline:none;cursor:pointer}
+.feature-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);color:#fff}
+.feature-card h3{color:#fff}
+.feature-card p{color:#f3e8ce}
+.section-cta{padding:80px 8%;background:rgba(15,24,34,.9);text-align:center;color:#fff}
+.section-cta a{background:var(--primary-bright);color:#111}
+.team-section{padding:80px 8%;background:rgba(255,255,255,.92);text-align:center}
+.team-section h2{font-size:38px;margin-bottom:8px;color:#000}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+.team-card{background:#fff;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.team-card img{width:140px;height:140px;object-fit:cover;border-radius:50%;margin-bottom:16px;border:4px solid var(--primary-bright)}
+.team-card h3{font-size:22px;margin-bottom:8px;color:#111}
+.team-card .role{color:var(--primary);font-weight:600;margin-bottom:10px}
+.team-card p{color:#444;line-height:1.6}
+.logo{display:flex;align-items:center;gap:14px}
+.logo img{width:92px !important;height:92px !important;object-fit:contain}
+.logo-text h2{margin:0;font-size:22px;font-weight:700;color:#f6d36a}
+.logo-text p{margin:0;font-size:14px;color:#f4e7c9}

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <div>
+        <span class="tag">{% if LANGUAGE_CODE == 'ne' %}विश्वसनीय लगानी साझेदार{% else %}Trusted Technology Partner{% endif %}</span>
+        <h1>{% if LANGUAGE_CODE == 'ne' %}धन निर्माण गर्नुहोस्।<br>आत्मविश्वासका साथ लगानी गर्नुहोस्।{% else %}Build Better Software<br>Code With Confidence.{% endif %}</h1>
+        <p>{% if LANGUAGE_CODE == 'ne' %}व्यक्तिगत र संस्थाहरूका लागि व्यावसायिक पोर्टफोलियो व्यवस्थापन, सम्पत्ति योजना र लगानी सल्लाह।{% else %}We design and develop modern websites, web applications, and custom software solutions using cutting-edge technologies.{% endif %}</p>
+        <a class="cta" href="{% url 'login' %}">{% if LANGUAGE_CODE == 'ne' %}पोर्टफोलियो प्रणालीमा पहुँच{% else %}Start Your Project{% endif %}</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}हाम्रो बारेमा{% else %}About Us{% endif %}</h2>
+    <p>{% if LANGUAGE_CODE == 'ne' %}हामी आधुनिक, सुरक्षित र प्रयोगकर्ता-मैत्री डिजिटल समाधानहरू निर्माण गर्न समर्पित एक उत्साही सफ्टवेयर विकास टोली हौं। व्यावसायिक वेबसाइटदेखि लिएर विशेष आवश्यकता अनुसारका वेब एप्लिकेसनहरूसम्म, हामी नवीनतम प्रविधि र उत्कृष्ट विकास अभ्यासहरूको प्रयोग गरी विचारहरूलाई भरपर्दो सफ्टवेयरमा रूपान्तरण गर्छौं।{% else %}We are a passionate software development team dedicated to building modern, secure, and user-friendly digital solutions. From business websites to custom web applications, we transform ideas into reliable software using the latest technologies and best development practices.{% endif %}</p>
+</section>
+
+<section class="stats">
+    <div class="card"><h2>5+</h2><p>{% if LANGUAGE_CODE == 'ne' %}सम्पन्न परियोजनाहरू{% else %}Projects Completed{% endif %}</p></div>
+    <div class="card"><h2>100+</h2><p>{% if LANGUAGE_CODE == 'ne' %}कोडिङका घण्टाहरू{% else %}Hours of Coding{% endif %}</p></div>
+    <div class="card"><h2>10+</h2><p>{% if LANGUAGE_CODE == 'ne' %}प्रयोग गरिएका प्रविधिहरू{% else %}Technologies Used{% endif %}</p></div>
+    <div class="card"><h2>100%</h2><p>{% if LANGUAGE_CODE == 'ne' %}प्रतिबद्धता{% else %}Commitment{% endif %}</p></div>
+</section>
+
+<section id="services" class="services">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}हाम्रो सेवाहरू{% else %}Our Services{% endif %}</h2>
+    <div class="grid">
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}पोर्टफोलियो व्यवस्थापन{% else %}Web Development{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}व्यावसायिक लगानी रणनीतिहरू।{% else %}Modern, responsive websites built with HTML, CSS, JavaScript, and Python.{% endif %}</p></div>
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}लगानी व्यवस्थापन{% else %}Django Development{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}तपाईंको वित्तीय लक्ष्यका लागि व्यावसायिक पोर्टफोलियो व्यवस्थापन।{% else %}Secure and scalable web applications using the Django framework.{% endif %}</p></div>
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}धन योजना{% else %}Frontend Development{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}दीर्घकालीन वित्तीय योजना।{% else %}Beautiful and interactive user interfaces using modern web technologies.{% endif %}</p></div>
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}व्यापार लगानी परामर्श{% else %}Database Design{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}व्यवसायहरूलाई लाभदायक लगानी अवसरहरू पहिचान गर्न र वित्तीय जोखिम व्यवस्थापन गर्न मद्दत गर्दै।{% else %}Efficient database solutions with MySQL, PostgreSQL, and SQLite.{% endif %}</p></div>
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}कर्पोरेट वित्त{% else %}Website Maintenance{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}व्यापार सल्लाह समाधानहरू।{% else %}Keeping websites secure, updated, and running smoothly.{% endif %}</p></div>
+        <div class="card"><h3>{% if LANGUAGE_CODE == 'ne' %}कर्पोरेट वित्त{% else %}Custom Software{% endif %}</h3><p>{% if LANGUAGE_CODE == 'ne' %}व्यापार सल्लाह समाधानहरू।{% else %}Tailor-made software solutions designed to meet your unique requirements.{% endif %}</p></div>
+    </div>
+</section>
+
+<section class="features" style="padding:80px 120px; background:linear-gradient(120deg, #0d47a1 0%, #3e8ed0 100%); color:#fff;">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}के नयाँ छ{% else %}What’s New{% endif %}</h2>
+    <div class="grid" style="margin-top:40px; gap:24px;">
+        <div class="card feature-card">
+            <h3>{% if LANGUAGE_CODE == 'ne' %}सम्पर्क फारम{% else %}Contact Form{% endif %}</h3>
+            <p>{% if LANGUAGE_CODE == 'ne' %}वेबसाइटबाट प्रत्यक्ष रूपमा enquiries पठाउनुहोस् र इमेल सूचना प्राप्त गर्नुहोस्।{% else %}Send inquiries directly from the website and receive email notifications.{% endif %}</p>
+            <a class="btn" href="{% url 'contact' %}">{% if LANGUAGE_CODE == 'ne' %}हामीलाई सम्पर्क गर्नुहोस्{% else %}Contact Us{% endif %}</a>
+        </div>
+        <div class="card feature-card">
+            <h3>{% if LANGUAGE_CODE == 'ne' %}समाचार र सूचना{% else %}News & Announcements{% endif %}</h3>
+            <p>{% if LANGUAGE_CODE == 'ne' %}कम्पनी अपडेट, वित्तीय समाचार, र नियामक पोस्टहरू पढ्नुहोस्।{% else %}Read company updates, financial news, and regulatory posts.{% endif %}</p>
+            <a class="btn" href="{% url 'news' %}">{% if LANGUAGE_CODE == 'ne' %}समाचार हेर्नुहोस्{% else %}View News{% endif %}</a>
+        </div>
+        <div class="card feature-card">
+            <h3>{% if LANGUAGE_CODE == 'ne' %}डाउनलोडहरू{% else %}Downloads{% endif %}</h3>
+            <p>{% if LANGUAGE_CODE == 'ne' %}प्रशासनबाट अपलोड गरिएको ब्रोशर, वार्षिक प्रतिवेदन, र फारमहरू पहुँच गर्नुहोस्।{% else %}Access brochures, annual reports, and forms uploaded from the admin.{% endif %}</p>
+            <a class="btn" href="{% url 'downloads' %}">{% if LANGUAGE_CODE == 'ne' %}फाइलहरू डाउनलोड गर्नुहोस्{% else %}Download Files{% endif %}</a>
+        </div>
+        <div class="card feature-card">
+            <h3>{% if LANGUAGE_CODE == 'ne' %}FAQ{% else %}FAQ{% endif %}</h3>
+            <p>{% if LANGUAGE_CODE == 'ne' %}Accordion शैलीका समर्थनका साथ सामान्य प्रश्नका जवाफहरू पत्ता लगाउनुहोस्।{% else %}Find answers to common questions with accordion-style support.{% endif %}</p>
+            <a class="btn" href="{% url 'faq' %}">{% if LANGUAGE_CODE == 'ne' %}FAQ पढ्नुहोस्{% else %}Read FAQ{% endif %}</a>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="team-section">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}हाम्रो टोली{% else %}Our Team{% endif %}</h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <img src="{% static 'team.png' %}" alt="Shibu pandey">
+            <h3>Shibu pandey</h3>
+            <p class="role">👨‍💻 Lead Python &amp; Django Developer</p>
+            <p>Specializes in building secure, scalable, and high-performance web applications using Python and Django. Focuses on backend architecture, APIs, and database design.</p>
+        </div>
+        <div class="team-card">
+            <img src="{% static 'team.png' %}" alt="Shibu pandey">
+            <h3>Shibu pandey</h3>
+            <p class="role">👨‍💻 Lead Python &amp; Django Developer</p>
+            <p>Specializes in building secure, scalable, and high-performance web applications using Python and Django. Focuses on backend architecture, APIs, and database design.</p>
+        </div>
+        <div class="team-card">
+            <img src="{% static 'team.png' %}" alt="Shibu pandey">
+            <h3>Shibu pandey</h3>
+            <p class="role">👨‍💻 Lead Python &amp; Django Developer</p>
+            <p>Specializes in building secure, scalable, and high-performance web applications using Python and Django. Focuses on backend architecture, APIs, and database design.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact" style="background:#fff; color:#111; padding:80px 120px;">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}हामीलाई सम्पर्क गर्नुहोस्{% else %}Contact Us{% endif %}</h2>
+    <p>{% if LANGUAGE_CODE == 'ne' %}इमेल{% else %}Email{% endif %}: hello@ministryofcoding.com</p>
+    <p>{% if LANGUAGE_CODE == 'ne' %}फोन{% else %}Phone{% endif %}: +92 300 0000000</p>
+    <p>{% if LANGUAGE_CODE == 'ne' %}ठेगाना{% else %}Address{% endif %}: 12th Floor, Business Avenue, Karachi</p>
+</section>
+
+<section class="cta-section" style="padding:80px 120px; background:#f4f9ff; text-align:center;">
+    <h2>{% if LANGUAGE_CODE == 'ne' %}तपाइँको अर्को परियोजना निर्माण गर्न तयार हुनुहुन्छ?{% else %}Ready to Build Your Next Project?{% endif %}</h2>
+    <p>{% if LANGUAGE_CODE == 'ne' %}आउनुहोस् तपाईको आवश्यकता अनुसार छिटो, सुरक्षित, र आधुनिक वेबसाइट निर्माण गरौं।{% else %}Let's create a fast, secure, and modern website tailored to your needs.{% endif %}</p>
+    <a class="cta" href="{% url 'consultation' %}">{% if LANGUAGE_CODE == 'ne' %}आफ्नो परियोजना सुरु गर्नुहोस्{% else %}Start Your Project{% endif %}</a>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="contact" style="padding:80px 120px;">
+    <h1>📞 Contact Us</h1>
+    <p>Email: info@nationalinvestment.com</p>
+    <p>Phone: +977-9800000000</p>
+    <p>Address: Kathmandu, Nepal</p>
+
+    <form method="POST" style="max-width:600px; margin-top:30px; display:grid; gap:18px;">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <label for="id_name">Name</label>
+        {{ form.name }}
+
+        <label for="id_email">Email</label>
+        {{ form.email }}
+
+        <label for="id_subject">Subject</label>
+        {{ form.subject }}
+
+        <label for="id_message">Message</label>
+        {{ form.message }}
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+{% endblock %}

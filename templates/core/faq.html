@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+<section class="faq" style="padding:80px 120px;">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-list" style="margin-top:40px;">
+        {% for faq in faqs %}
+            <div class="faq-item" style="margin-bottom:16px; border:1px solid #e5e7eb; border-radius:16px; overflow:hidden;">
+                <button class="faq-question" type="button" style="width:100%; text-align:left; padding:20px; background:#f8fafc; border:none; cursor:pointer; font-weight:600; font-size:18px;">
+                    {{ faq.question }}
+                </button>
+                <div class="faq-answer" style="padding:20px; display:none; background:white;">
+                    <p>{{ faq.answer }}</p>
+                </div>
+            </div>
+        {% empty %}
+            <p>No FAQ entries have been added yet.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.faq-question').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var answer = button.nextElementSibling;
+                var isOpen = answer.style.display === 'block';
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+    });
+</script>
+{% endblock %}

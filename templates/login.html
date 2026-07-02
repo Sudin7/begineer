@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ministry of Coding</title>
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+        <div class="overlay">
+
+            <img src="{% static 'logo.png' %}" class="logo">
+
+            <h1>
+                Ministry of Coding
+            </h1>
+
+            <p>
+
+                Secure Portfolio Management System
+
+            </p>
+
+            <div class="line"></div>
+
+            <h3>
+
+                Build Better Software
+                <br>
+                Code With Confidence.
+
+            </h3>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <h1>Login</h1>
+
+            <p>
+
+                Login to your company account.
+
+            </p>
+
+            {% if messages %}
+
+            {% for message in messages %}
+
+            <div class="error">
+
+                {{ message }}
+
+            </div>
+
+            {% endfor %}
+
+            {% endif %}
+
+            <label>Email / Username</label>
+
+            <input
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+            required>
+
+            <label>Password</label>
+
+            <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required>
+
+            <a href="#">Forgot Password?</a>
+
+            <button>
+
+                Login
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

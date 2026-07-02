@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div style="display:flex; gap:24px; padding:80px; background:#f4f7fb; min-height:100vh;">
+    <aside style="width:260px; background:#0f172a; color:white; border-radius:20px; padding:24px; min-height:600px;">
+        <h2 style="text-align:center; margin-bottom:24px;">Ministry of Coding</h2>
+        <nav style="display:grid; gap:10px;">
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px; background:#2563eb;">🏠 Dashboard</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">👨‍💻 Employees</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">📋 Projects</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">📝 Tasks</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">⏰ Attendance</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">💬 Messages</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">📅 Meetings</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">📁 Documents</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">🛠 Support Tickets</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">⚙ Settings</a>
+            <a href="#" style="color:white; text-decoration:none; padding:12px; display:block; border-radius:12px;">🚪 Logout</a>
+        </nav>
+    </aside>
+
+    <main style="flex:1; display:grid; gap:24px;">
+        <section style="background:white; padding:28px; border-radius:20px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+            <h1 style="margin:0 0 8px; color:#0f172a;">Welcome back, {{ request.user.username }} 👋</h1>
+            <p style="margin:0; color:#475569; font-size:16px;">Ministry of Coding Employee Portal</p>
+            <p style="margin:8px 0 0; color:#2563eb; font-weight:600;">Today is a great day to build something amazing.</p>
+        </section>
+
+        <section style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px;">
+            <div style="background:white; padding:20px; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+                <h3 style="margin:0 0 8px; color:#0f172a;">Recent Projects</h3>
+                <div style="font-size:14px; color:#334155; line-height:1.7;">
+                    <div><strong>Company Website</strong> <span style="color:#22c55e;">🟢 In Progress</span><br>15 Jul 2026</div>
+                    <div style="margin-top:8px;"><strong>HR Management System</strong> <span style="color:#f59e0b;">🟡 Testing</span><br>18 Jul 2026</div>
+                    <div style="margin-top:8px;"><strong>Inventory API</strong> <span style="color:#2563eb;">🔵 Development</span><br>21 Jul 2026</div>
+                    <div style="margin-top:8px;"><strong>Client Portal</strong> <span style="color:#22c55e;">✅ Completed</span><br>28 Jun 2026</div>
+                </div>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+                <h3 style="margin:0 0 8px; color:#0f172a;">Today's Schedule</h3>
+                <div style="font-size:14px; color:#334155; line-height:1.8;">
+                    <div>09:00 AM — Daily Standup</div>
+                    <div>11:00 AM — Client Meeting</div>
+                    <div>02:00 PM — Backend Development</div>
+                    <div>04:00 PM — Code Review</div>
+                </div>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+                <h3 style="margin:0 0 8px; color:#0f172a;">Team Members Online</h3>
+                <div style="font-size:14px; color:#334155; line-height:1.8;">
+                    <div>🟢 Aarav Sharma — CEO</div>
+                    <div>🟢 Sujan Thapa — Django Developer</div>
+                    <div>🟢 Nisha Karki — Frontend Developer</div>
+                    <div>🟡 Rohan Gautam — Database Engineer</div>
+                    <div>🔴 Priya Adhikari — Offline</div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background:white; padding:24px; border-radius:20px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+            <h3 style="margin:0 0 12px; color:#0f172a;">Quick Actions</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                <a href="#" style="background:#2563eb; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Create Task</a>
+                <a href="#" style="background:#22c55e; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Upload Document</a>
+                <a href="#" style="background:#f59e0b; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Request Leave</a>
+                <a href="#" style="background:#2563eb; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Submit Timesheet</a>
+                <a href="#" style="background:#ef4444; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Join Meeting</a>
+                <a href="#" style="background:#0f172a; color:white; padding:10px 14px; border-radius:999px; text-decoration:none;">+ Report Issue</a>
+            </div>
+        </section>
+    </main>
+</div>
+{% endblock %}

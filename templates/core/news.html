@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}News & Announcements{% endblock %}
+
+{% block content %}
+<section class="news" style="padding:80px 120px;">
+    <h1>News & Announcements</h1>
+    <div class="grid" style="margin-top:40px; gap:24px;">
+        {% for item in news_list %}
+            <div class="card">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.summary|default:item.body|truncatechars:220 }}</p>
+                <small>{{ item.published_at|date:"F j, Y" }}</small>
+            </div>
+        {% empty %}
+            <p>No news items are available at this time.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Consultation{% endblock %}
+
+{% block content %}
+<section class="consultation" style="padding:80px 120px; max-width:900px; margin:0 auto;">
+    <h1>{% trans "Book a Consultation" %}</h1>
+    <p>{% trans "Fill out the form below to request a consultation with our investment advisors." %}</p>
+
+    <form method="POST" style="display:grid; gap:20px; margin-top:30px;">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <label for="id_name">{% trans "Name" %}</label>
+        {{ form.name }}
+
+        <label for="id_email">{% trans "Email" %}</label>
+        {{ form.email }}
+
+        <label for="id_phone">{% trans "Phone" %}</label>
+        {{ form.phone }}
+
+        <label for="id_preferred_date">{% trans "Preferred Date" %}</label>
+        {{ form.preferred_date }}
+
+        <label for="id_preferred_time">{% trans "Preferred Time" %}</label>
+        {{ form.preferred_time }}
+
+        <label for="id_message">{% trans "Message" %}</label>
+        {{ form.message }}
+
+        <button type="submit" class="btn">{% trans "Submit Request" %}</button>
+    </form>
+</section>
+{% endblock %}

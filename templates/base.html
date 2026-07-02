@@ -1,0 +1,53 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}National Investment & Capital Limited{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav">
+    <div class="logo">
+        <img src="{% static 'logo.png' %}" alt="Logo">
+        <div class="logo-text">
+            <h2>{% if LANGUAGE_CODE == 'ne' %}कोडिङ मन्त्रालय{% else %}Ministry of Coding{% endif %}</h2>
+            
+        </div>
+    </div>
+    <ul>
+        <li><a href="{% url 'home' %}">{% if LANGUAGE_CODE == 'ne' %}होम{% else %}Home{% endif %}</a></li>
+        <li><a href="{% url 'about' %}">{% if LANGUAGE_CODE == 'ne' %}हाम्रो बारे{% else %}About{% endif %}</a></li>
+        <li><a href="{% url 'services' %}">{% if LANGUAGE_CODE == 'ne' %}सेवाहरू{% else %}Services{% endif %}</a></li>
+        <li><a href="{% url 'contact' %}">{% if LANGUAGE_CODE == 'ne' %}सम्पर्क{% else %}Contact{% endif %}</a></li>
+        <li><a href="{% url 'consultation' %}">{% if LANGUAGE_CODE == 'ne' %}परामर्श बुक गर्नुहोस्{% else %}Book Consultation{% endif %}</a></li>
+        <li><a href="{% url 'news' %}">{% if LANGUAGE_CODE == 'ne' %}समाचार{% else %}News{% endif %}</a></li>
+        <li><a href="{% url 'downloads' %}">{% if LANGUAGE_CODE == 'ne' %}डाउनलोडहरू{% else %}Downloads{% endif %}</a></li>
+        <li><a href="{% url 'faq' %}">{% if LANGUAGE_CODE == 'ne' %}FAQ{% else %}FAQ{% endif %}</a></li>
+        <li><a class="btn" href="{% url 'login' %}">{% if LANGUAGE_CODE == 'ne' %}कम्पनी लग इन{% else %}Company Login{% endif %}</a></li>
+    </ul>
+    <form action="{% url 'set_language' %}" method="post" class="language-switcher">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <select name="language" onchange="this.form.submit()">
+            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+            <option value="ne" {% if LANGUAGE_CODE == 'ne' %}selected{% endif %}>नेपाली</option>
+        </select>
+    </form>
+</nav>
+
+{% if messages %}
+<div class="messages" style="padding:20px 80px;">
+    {% for message in messages %}
+        <div style="background:#f0fdfa;color:#055160;border:1px solid #bbf7d0;border-radius:12px;padding:16px;margin-bottom:10px;">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+<footer>© 2026 {% if LANGUAGE_CODE == 'ne' %}कोडिङ मन्त्रालय{% else %}Ministry of Coding{% endif %}</footer>
+</body>
+</html>

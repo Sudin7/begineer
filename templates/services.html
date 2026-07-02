@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<section class="services" style="padding:80px 120px;">
+    <h1>Our Services</h1>
+    <div class="cards" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-top:32px;">
+        <div class="card">
+            <h2>Investment Planning</h2>
+            <p>Professional investment plans tailored to your goals.</p>
+        </div>
+        <div class="card">
+            <h2>Portfolio Management</h2>
+            <p>Expert portfolio management for long-term wealth.</p>
+        </div>
+        <div class="card">
+            <h2>Corporate Finance</h2>
+            <p>Business financing and investment advisory.</p>
+        </div>
+        <div class="card">
+            <h2>Research & Analysis</h2>
+            <p>Market research and investment opportunities.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
